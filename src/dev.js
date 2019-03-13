@@ -21,13 +21,17 @@ class AppWrapper extends React.Component {
   }
 }
 
+const handleChange = path => {
+  if (ready) {
+    clearRequire.all()
+    app.rerender()
+  }
+}
+
 watch(__dirname, { ignored: /(^|[/\\])\../ })
-  .on('all', (event, path) => {
-    if (ready && (event === 'unlink' || event === 'add' || event === 'change')) {
-      clearRequire.all()
-      app.rerender()
-    }
-  })
+  .on('unlink', handleChange)
+  .on('add', handleChange)
+  .on('change', handleChange)
   .on('ready', () => {
     ready = true
     app = render(<AppWrapper />, process.stdout)

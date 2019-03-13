@@ -3,23 +3,30 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "build": "babel src/index.js -o demo.js",
-    "start": "babel-node src/index.js"
+    "build": "NODE_ENV=production babel src -d built -D",
+    "start": "babel-node src/dev.js"
   },
   "bin": {
-    "demo": "./demo.js"
+    "demo": "built/demo.js"
   },
+  "files": [
+    "built/demo.js"
+  ],
   "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
   "license": "MIT",
   "dependencies": {
+    "chokidar": "^2.1.2",
     "ink": "^2.0.5",
+    "ink-big-text": "^1.0.1",
     "ink-box": "^1.0.0",
+    "ink-gradient": "^1.0.0",
     "react": "^16.8.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "clear-require": "^3.0.0"
   }
 }

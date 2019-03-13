@@ -1,0 +1,25 @@
+{
+  "name": "ink-demo",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "babel src/index.js -o demo.js",
+    "start": "babel-node src/index.js"
+  },
+  "bin": {
+    "demo": "./demo.js"
+  },
+  "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
+  "license": "MIT",
+  "dependencies": {
+    "ink": "^2.0.5",
+    "ink-box": "^1.0.0",
+    "react": "^16.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}

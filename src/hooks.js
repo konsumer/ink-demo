@@ -8,8 +8,8 @@ export const useCounter = () => {
     i = setInterval(() => {
       setCounter(c => c + 1)
     }, 500)
-  }, () => {
-    clearInterval(i)
+
+    return () => clearInterval(i)
   })
   return [counter, setCounter]
 }

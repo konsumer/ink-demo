@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 // this is the actual CLI that gets built
 
 import React from 'react'

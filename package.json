@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "NODE_ENV=production babel src -d built -D",
-    "start": "babel-node src/dev.js"
+    "start": "babel-node src/dev.js",
+    "prepublish": "npm run build"
   },
   "bin": {
     "demo": "built/demo.js"

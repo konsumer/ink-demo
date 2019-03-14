@@ -8,7 +8,7 @@
     "prepublish": "npm run build"
   },
   "bin": {
-    "demo": "built/demo.js"
+    "demo": "built/*"
   },
   "files": [
     "built/demo.js"

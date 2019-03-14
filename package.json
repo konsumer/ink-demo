@@ -8,10 +8,10 @@
     "prepublish": "npm run build"
   },
   "bin": {
-    "demo": "built/*"
+    "demo": "built/demo.js"
   },
   "files": [
-    "built/demo.js"
+    "built/*"
   ],
   "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
   "license": "MIT",

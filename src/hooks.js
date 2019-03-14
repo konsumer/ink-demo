@@ -11,4 +11,5 @@ export const useCounter = () => {
   return [counter, setCounter]
 }
 
+// get a reference to stdout
 export const useStdout = () => useContext(StdoutContext).stdout

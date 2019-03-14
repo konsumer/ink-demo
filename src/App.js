@@ -3,11 +3,11 @@ import { Box } from 'ink'
 import Gradient from 'ink-gradient'
 import BigText from 'ink-big-text'
 
-import { useCounter } from './hooks'
-import { withStdout } from './hoc'
+import { useCounter, useStdout } from './hooks'
 
-const App = ({ stdout }) => {
+const App = () => {
   const [counter] = useCounter()
+  const stdout = useStdout()
   return (
     <Box height={stdout.rows} width={stdout.columns} flexShrink={0} flexGrow={1} alignItems='center' justifyContent='center'>
       <Gradient name='rainbow'>
@@ -17,4 +17,4 @@ const App = ({ stdout }) => {
   )
 }
 
-export default withStdout(App)
+export default App

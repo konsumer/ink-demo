@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { StdoutContext } from 'ink'
 
 // simple demo-counter hook
 export const useCounter = () => {
@@ -9,3 +10,5 @@ export const useCounter = () => {
   })
   return [counter, setCounter]
 }
+
+export const useStdout = () => useContext(StdoutContext).stdout

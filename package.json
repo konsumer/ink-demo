@@ -1,10 +1,9 @@
 {
   "name": "ink-demo",
   "version": "0.0.0",
-  "description": "",
   "scripts": {
-    "build": "NODE_ENV=production babel src -d built -D",
-    "start": "babel-node src/dev.js",
+    "build": "NODE_ENV=production sucrase ./src/ -d ./built/ --transforms jsx,imports",
+    "start": "sucrase-node src/demo.js",
     "prepublish": "npm run build"
   },
   "bin": {
@@ -20,14 +19,11 @@
     "ink-big-text": "^1.0.1",
     "ink-box": "^1.0.0",
     "ink-gradient": "^1.0.0",
-    "react": "^16.8.3"
+    "react": "^16.8.3",
+    "strip-ansi": "^5.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "chokidar": "^2.1.2",
-    "clear-require": "^3.0.0"
+    "react-hot-loader": "^4.8.0",
+    "sucrase": "^3.10.0"
   }
 }

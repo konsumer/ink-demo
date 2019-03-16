@@ -7,4 +7,5 @@ import { render } from 'ink'
 
 import App from './App'
 
-render(<App />, process.stdout)
+let app = render(<App />, process.stdout)
+

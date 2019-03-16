@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Box height={stdout.rows} width={stdout.columns} flexShrink={0} flexGrow={1} alignItems='center' justifyContent='center'>
       <Gradient name='rainbow'>
-        <BigText text={`${counter} unicorns`} />
+        <BigText text={`${counter % 100} unicorns`} />
       </Gradient>
     </Box>
   )
